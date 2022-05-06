@@ -9,5 +9,11 @@ fn main() {
     s.push_str(", world!");
     println!("{}", s);
     let z = s; //废除s变量
+    {
+        let z = 10;
+        println!("{}", z);
+    }
     println!("{}", z);
+    let s = z.clone(); //克隆z变量
+    println!("{}", s);
 }

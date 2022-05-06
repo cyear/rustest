@@ -5,25 +5,16 @@
  *   If not, see <https://www.gnu.org/licenses/>.
 */
 fn main() {
-    println!("hello");
-    let mut num = 3;
-    println!("number: {}", num);
-    num = {
-        num + 1
-    };
-    println!("number: {}", num);
-    let mut n = 1;
-    'one: loop {
-        loop {
-            num += 1;
-            if num > 50 {
-                break;
-            }
-        }
-            n += 1;
-            if n > 10 {
-                break 'one;
-        }
-    };
-    println!("number: {}", num);
+    //打印斐波那契数列
+    let mut a = 0;
+    let mut b = 1;
+    let mut c = 0;
+    print!("{} ", a);
+    print!("{} ", b);
+    while c < 10 {
+        c = a + b;
+        a = b;
+        b = c;
+        print!("{} ", c);
+    }
 }
